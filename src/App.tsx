@@ -1,13 +1,12 @@
-
+import { Outlet } from "react-router";
+import CommonLayout from "./components/layout/CommonLayout";
 
 function App() {
-  
-
   return (
-    <>
-     <h1 className="text-4xl font-semibold">Parcel Lift</h1>
-    </>
-  )
+    <CommonLayout>
+      <Outlet />
+    </CommonLayout>
+  );
 }
 
-export default App
+export default App;

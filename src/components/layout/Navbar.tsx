@@ -17,7 +17,7 @@ import {
   useUserInfoQuery,
 } from "@/redux/features/auth/auth.api";
 import { role } from "@/constants/role";
-import Logo from "@/assets/icon/Logo";
+import Logo from "@/assets/icon/Logo.png";
 import { ModeToggle } from "../mode.toggle";
 import { useAppDispatch } from "@/redux/hook";
 
@@ -117,8 +117,12 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <Link to="/" className="text-primary hover:text-primary/90">
               <div className="text-foreground flex gap-2 items-center">
-                <p className="hidden sm:block"><Logo/></p>
-                <h1 className="pacifico-regular sm:text-2xl text-xl font-medium sm:font-semibold">Delivery Express</h1>
+                <p className="hidden sm:block">
+                  <img src={Logo} alt="Logo" className="h-12 w-auto" />
+                </p>
+                <h1 className="pacifico-regular sm:text-2xl text-xl font-medium sm:font-semibold">
+                  Parcel <span className="text-orange-500">Lift</span>
+                </h1>
               </div>
             </Link>
             {/* Navigation menu */}

@@ -26,11 +26,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar {...props}>
       <SidebarHeader className="items-center">
         <Link to="/">
-          <Logo />
+          <img src={Logo} alt="Logo" className="h-12 w-auto" />
         </Link>
       </SidebarHeader>
       <SidebarContent>
-
         {data.navMain.map((item) => (
           <SidebarGroup key={item.title}>
             <SidebarGroupLabel>{item.title}</SidebarGroupLabel>

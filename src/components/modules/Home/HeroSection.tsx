@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Logo from "@/assets/icon/Logo.png";
+import Logo2 from "@/assets/icon/Logo2.png";
+import Bnr from "@/assets/icon/banner.jpg"
 import { Card, CardContent } from "@/components/ui/card";
 import type { IParcel } from "@/types";
 import { useGetParcelByTrackingIdQuery } from "@/redux/features/Parcel/parcel.api";
@@ -11,10 +12,13 @@ export default function HeroSection() {
   const [trackingId, setTrackingId] = useState("");
   const [submittedId, setSubmittedId] = useState<string | null>(null);
 
-  const { data: parcels, isFetching, isError } =
-    useGetParcelByTrackingIdQuery(submittedId!, {
-      skip: !submittedId,
-    });
+  const {
+    data: parcels,
+    isFetching,
+    isError,
+  } = useGetParcelByTrackingIdQuery(submittedId!, {
+    skip: !submittedId,
+  });
 
   const handleTrack = () => {
     if (trackingId.trim()) {
@@ -27,8 +31,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
         <img
           alt="background"
-          src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/patterns/square-alt-grid.svg"
-          className="[mask-image:radial-gradient(75%_75%_at_center,white,transparent)]"
+          src={Bnr}
+          className="[mask-image:radial-gradient(85%_85%_at_center,white,transparent)]"
         />
       </div>
 
@@ -36,17 +40,16 @@ export default function HeroSection() {
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           {/* Logo */}
           <div className="rounded-xl bg-background/30 p-4 shadow-sm backdrop-blur-sm mb-6">
-            <Logo />
+            <img src={Logo2} alt="Logo" className="h-48 w-auto" />
           </div>
 
           {/* Heading */}
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-pretty lg:text-5xl">
-            Fast & Reliable <span className="text-primary">Parcel Delivery</span>
+            Bangladesh’s Fastest ⚡
+            <span className="text-primary">Parcel Network</span>
           </h1>
           <p className="mx-auto max-w-3xl text-muted-foreground lg:text-xl mb-6">
-            Deliver your parcels anywhere in Bangladesh with speed and
-            reliability. Track your delivery and manage your parcels easily with
-            our platform.
+            Experience reliable courier solutions designed for modern needs. Manage, monitor, and deliver with ease — because every parcel deserves care.
           </p>
 
           {/* Tracking Input */}
@@ -61,8 +64,12 @@ export default function HeroSection() {
 
           {/* Results */}
           <div className="mt-8 w-full max-w-2xl">
-            {isFetching && <p className="text-sm text-muted-foreground">Loading...</p>}
-            {isError && <p className="text-sm text-red-500">No parcel found.</p>}
+            {isFetching && (
+              <p className="text-sm text-muted-foreground">Loading...</p>
+            )}
+            {isError && (
+              <p className="text-sm text-red-500">No parcel found.</p>
+            )}
             {parcels &&
               parcels.map((parcel: IParcel) => (
                 <Card key={parcel._id} className="mt-4">
@@ -70,7 +77,10 @@ export default function HeroSection() {
                     <h3 className="font-semibold text-lg">
                       {parcel.name} ({parcel.trackingId})
                     </h3>
-                    <p>Status: <span className="font-medium">{parcel.status}</span></p>
+                    <p>
+                      Status:{" "}
+                      <span className="font-medium">{parcel.status}</span>
+                    </p>
                     <p>Cost: ${parcel.cost}</p>
                     <p>Weight: {parcel.weight}kg</p>
                     <p>
@@ -78,7 +88,9 @@ export default function HeroSection() {
                     </p>
                     <p>
                       Estimated Delivery:{" "}
-                      {new Date(parcel.estimatedDeliveryDate).toLocaleDateString()}
+                      {new Date(
+                        parcel.estimatedDeliveryDate
+                      ).toLocaleDateString()}
                     </p>
                     <div className="mt-2">
                       <p className="font-semibold">Sender Info:</p>

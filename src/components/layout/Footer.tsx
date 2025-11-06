@@ -1,20 +1,27 @@
-import Logo from "@/assets/icon/logo.png";
-import { Facebook, Github, Instagram,  Linkedin,  Twitter } from "lucide-react";
+import Logo from "@/assets/icon/Logo.png";
+import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Link, useNavigate } from "react-router";
 
 export default function Footer() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <footer>
       <div className="mx-auto container space-y-8 px-4 py-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <div onClick={() => navigate('/')} className="text-foreground flex gap-2 items-center">
-              <Logo /> <h1 className="pacifico-regular text-2xl font-semibold">Delivery Express</h1>
+            <div
+              onClick={() => navigate("/")}
+              className="text-foreground flex gap-2 items-center"
+            >
+              <img src={Logo} alt="Logo" className="h-12 w-auto" />{" "}
+              <h1 className="pacifico-regular text-2xl font-semibold">
+                Parcel Lift
+              </h1>
             </div>
 
             <p className="mt-4 max-w-xs text-muted-foreground/80">
-              Delivery Express — Fast, reliable, and secure parcel services across Bangladesh. Every parcel matters, every delivery on time.
+              Parcel Lift — Fast, reliable, and secure parcel services across
+              Bangladesh. Every parcel matters, every delivery on time.
             </p>
 
             <ul className="mt-8 flex gap-6">

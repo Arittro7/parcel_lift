@@ -27,9 +27,7 @@ export const FAQ = () => {
                 How do I send a parcel with Parcel Lift?
               </AccordionTrigger>
               <AccordionContent>
-                Simply create an account, fill in the sender and receiver
-                details, choose your delivery option, and confirm your booking.
-                A courier will pick up your parcel from your location.
+                Create an account, enter sender and receiver details, select your delivery option, and confirm your booking. A courier will then collect the parcel directly from your location.
               </AccordionContent>
             </AccordionItem>
 
@@ -38,25 +36,21 @@ export const FAQ = () => {
                 Can I track my parcel in real-time?
               </AccordionTrigger>
               <AccordionContent>
-                Yes! Every parcel gets a unique tracking ID. You can use it on
-                our website to monitor your parcel’s journey in real-time.
+                Yes! Every parcel is assigned a unique tracking ID. Use it on our website to follow your parcel’s journey live, from pickup to delivery.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
               <AccordionTrigger>What areas do you deliver to?</AccordionTrigger>
               <AccordionContent>
-                We currently operate across all major cities and districts in
-                Bangladesh. More locations are being added regularly.
+                We currently serve all major cities and districts across Bangladesh. New service locations are being added regularly to expand our coverage.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
               <AccordionTrigger>How much does delivery cost?</AccordionTrigger>
               <AccordionContent>
-                Delivery charges depend on the parcel’s weight, dimensions, and
-                destination. You can check the estimated cost before confirming
-                your booking.
+                Charges vary depending on parcel weight, dimensions, and destination. You’ll see the estimated cost before confirming your booking.
               </AccordionContent>
             </AccordionItem>
 
@@ -65,9 +59,7 @@ export const FAQ = () => {
                 What happens if my parcel is delayed or lost?
               </AccordionTrigger>
               <AccordionContent>
-                In case of delays, we keep you updated via SMS and email. If a
-                parcel is lost, we provide full support and compensation as per
-                our policy.
+                If there’s a delay, we’ll notify you via SMS and email. In the rare case of a lost parcel, our team provides full support and compensation according to company policy.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

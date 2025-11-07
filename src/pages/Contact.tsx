@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 import {
   Mail,
   MapPin,
@@ -13,7 +12,6 @@ import {
   Send,
   Package,
   Truck,
-  CheckCircle,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -52,7 +50,7 @@ export const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      description: "For customer support & inquiries",
+      description: "For customer support & enquiries",
       value: "support@deliveryexpress.com",
       action: "mailto:support@deliveryexpress.com",
     },
@@ -61,20 +59,20 @@ export const Contact = () => {
       title: "Call Us",
       description: "Speak with our delivery support",
       value: "+880 1234-567890",
-      action: "tel:+8801234567890",
+      action: "tel:+8801773993397",
     },
     {
       icon: MapPin,
       title: "Head Office",
       description: "Visit our service center",
-      value: "Sreemongal, Sylhet, Bangladesh",
+      value: "Keranipara, Rangpur Bangladesh",
       action: "#",
     },
     {
       icon: Clock,
       title: "Working Hours",
       description: "We’re available to assist",
-      value: "Sat-Thu: 9AM - 9PM",
+      value: "Sat-Thu: 9AM - 5PM",
       action: "#",
     },
   ];
@@ -82,7 +80,7 @@ export const Contact = () => {
   const reasons = [
     {
       icon: Package,
-      title: "Parcel Inquiries",
+      title: "Parcel Enquiries",
       description: "Questions about sending or tracking a parcel",
     },
     {
@@ -98,26 +96,18 @@ export const Contact = () => {
   ];
 
   return (
-    <div className=" bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className=" bg-gradient-to-br from-green-200 via-white to-blue-50">
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="mb-6 bg-blue-600 hover:bg-blue-700 text-lg px-6 py-2">
-            <span className="text-white pacifico-regular">
-              Contact Parcel Lift
-            </span>
-          </Badge>
+          <h1 className="mb-6 text-5xl font-semibold text-purple-800">
+            Our Values
+          </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            We're Here to Help
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {" "}
-              Anytime
-            </span>
+            📞 Get in Touch with Parcel Lift
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Whether it&apos;s a parcel inquiry, delivery support, or business
-            collaboration, our team is ready to assist you quickly and
-            efficiently.
+            We’re always here to support you. From parcel inquiries to delivery assistance or business partnerships, our team ensures quick and reliable responses.
           </p>
         </div>
       </section>
@@ -139,7 +129,7 @@ export const Contact = () => {
                 <p className="text-sm text-slate-400 mb-3">
                   {info.description}
                 </p>
-                <a href={info.action} className="font-semibold text-slate-400">
+                <a href={info.action} className="font-semibold text-green-400">
                   {info.value}
                 </a>
               </CardContent>
@@ -154,7 +144,7 @@ export const Contact = () => {
           <div className="lg:col-span-2">
             <Card className="shadow-2xl border-0">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">
+                <h2 className="text-2xl font-bold text-green-600 mb-4">
                   Send Us a Message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -212,7 +202,7 @@ export const Contact = () => {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 font-semibold"
+                    className="w-full bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-green-700 hover:to-green-300 font-semibold"
                   >
                     {isSubmitting ? (
                       "Sending..."
@@ -254,21 +244,6 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-0 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">
-                    Quick Response
-                  </h3>
-                </div>
-                <p className="text-slate-700 mb-4">
-                  We typically respond to parcel inquiries within 24 hours.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import CEO from "@/assets/Team/CEO.png"
 import Elo from "@/assets/Team/Elon_Musk.jpg"
@@ -50,10 +49,10 @@ export const About = () => {
   ];
 
   const stats = [
-    { number: "10K+", label: "Parcels Delivered", icon: Package },
+    { number: "17K+", label: "Parcels Delivered", icon: Package },
     { number: "500+", label: "Daily Deliveries", icon: Truck },
-    { number: "100+", label: "Delivery Agents", icon: Users },
-    { number: "50+", label: "Cities Covered", icon: Globe },
+    { number: "473", label: "Delivery Agents", icon: Users },
+    { number: "70", label: "Cities Covered", icon: Globe },
   ];
 
   const team = [
@@ -83,11 +82,9 @@ export const About = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="mb-6 bg-blue-600 hover:bg-blue-700 text-lg px-6 py-2">
-            <span className="pacifico-regular text-white">
-              About Parcel Lift
-            </span>
-          </Badge>
+          <h1 className="mb-6 text-5xl font-semibold text-purple-800">
+            About Parcel Lift
+          </h1>
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             Fast, Secure & Reliable
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -119,7 +116,7 @@ export const About = () => {
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-3xl font-bold  mb-2">{stat.number}</div>
-                  <div className="text-slate-600 font-medium">{stat.label}</div>
+                  <div className="text-yellow-400 text-xl font-medium">{stat.label}</div>
                 </CardContent>
               </Card>
             );
@@ -131,22 +128,19 @@ export const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <Badge className="mb-6 bg-purple-100 text-purple-800 hover:bg-purple-200">
-              Our Mission
-            </Badge>
+            <h1 className="mb-6 text-5xl font-semibold bg-purple-100 text-purple-800">
+              🚀Our Mission
+            </h1>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Delivering Trust Across Every Parcel
+              📦 Seamless & Reliable Logistics
             </h2>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              At Parcel Lift, our mission is to make parcel delivery seamless,
-              secure, and accessible for everyone. Whether it's personal
-              packages or business shipments, we ensure your parcels reach
-              safely and on time.
+              At Parcel Lift, our mission is simple — to connect people and businesses through dependable delivery. With Parcel Lift, every parcel arrives on time, every time.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-gradient-to-r from-green-600 to-green-400 hover:from-yellow-700 hover:to-yellow-500 text-white font-semibold"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -167,9 +161,9 @@ export const About = () => {
       {/* Values Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-          <Badge className="mb-6 bg-green-100 text-green-800 hover:bg-green-200">
+          <h1 className="mb-6 text-5xl font-semibold text-purple-800">
             Our Values
-          </Badge>
+          </h1>
           <h2 className="pacifico-regular text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             What Drives Parcel Lift
           </h2>

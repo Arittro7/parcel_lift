@@ -34,13 +34,13 @@ export default function Login() {
         <img
           src={deliveryLogin}
           alt="Parcel Lift Login Illustration"
-          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.8]"
+          className="absolute inset-0 h-full w-full object-cover object-top dark:brightness-[0.8]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20" />
         <div className="absolute bottom-10 left-10 text-white space-y-2">
-          <h2 className="text-3xl font-bold">Track • Manage • Deliver</h2>
+          <h2 className="text-3xl font-bold">🔍 Track Smarter, Deliver Faster</h2>
           <p className="max-w-xs text-sm text-gray-200">
-            Access your Parcel Lift account to stay updated on every parcel.
+            Access your account to monitor, manage, and ensure every parcel arrives right on time.
           </p>
         </div>
       </div>

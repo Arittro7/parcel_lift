@@ -110,8 +110,8 @@ export default function CreateParcelPage() {
       // 3️⃣ Payload create
       const payload = {
         ...data,
-        sender: currentUserId, // logged-in user
-        receiver: res.data._id, // validated receiver
+        sender: currentUserId,
+        receiver: res.data._id, 
       };
 
       // 4️⃣ Parcel create API call

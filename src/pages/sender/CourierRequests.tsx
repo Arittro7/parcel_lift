@@ -120,7 +120,7 @@ export default function CreateParcelPage() {
         toast.success("Parcel created successfully");
       }
     } catch (err: any) {
-      toast.error(err.data.message);
+      toast.error(err?.data?.message ?? "Something went wrong!");
     }
   };
 
@@ -231,7 +231,7 @@ export default function CreateParcelPage() {
                     <FormItem>
                       <FormLabel>Sender City</FormLabel>
                       <FormControl>
-                        <Input {...field} placeholder="e.g. Sreemongal" />
+                        <Input {...field} placeholder="e.g. Rangpur" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -247,7 +247,7 @@ export default function CreateParcelPage() {
                         <Input
                           type="number"
                           {...field}
-                          placeholder="e.g. 3210"
+                          placeholder="e.g. 5400"
                         />
                       </FormControl>
                       <FormMessage />
@@ -261,7 +261,7 @@ export default function CreateParcelPage() {
                     <FormItem>
                       <FormLabel>Sender Street</FormLabel>
                       <FormControl>
-                        <Input {...field} placeholder="123 Main Street" />
+                        <Input {...field} placeholder="64/03 DC'r mor" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -281,7 +281,7 @@ export default function CreateParcelPage() {
                         onValueChange={(value: Divisions) =>
                           field.onChange(value)
                         }
-                        value={field.value || "DHAKA"} // default value
+                        value={field.value || "DHAKA"} 
                       >
                         <FormControl>
                           <SelectTrigger className="w-full">
@@ -311,7 +311,7 @@ export default function CreateParcelPage() {
                     <FormItem>
                       <FormLabel>Delivery City</FormLabel>
                       <FormControl>
-                        <Input {...field} placeholder="e.g. Motijheel" />
+                        <Input {...field} placeholder="e.g. Dhanmondi" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -525,8 +525,10 @@ export default function CreateParcelPage() {
           </Form>
         </CardContent>
         <CardFooter className="flex justify-end">
-          <Button disabled={isLoading} type="submit" form="add-parcel-form">
-            {isLoading ? "Creating..." : "Create Tour"}
+          <Button
+          className="hover:bg-green-500 bg-yellow-400" 
+          disabled={isLoading} type="submit" form="add-parcel-form">
+            {isLoading ? "Creating..." : "Place Request"}
           </Button>
         </CardFooter>
       </Card>

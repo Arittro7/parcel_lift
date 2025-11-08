@@ -1,20 +1,19 @@
 import type { ISidebarItem } from "@/types";
 import { lazy } from "react";
+// import logo from "@/assets/icon/Logo2.png";
 
 const CancelParcel = lazy(() => import("@/pages/sender/cancelParcel"));
 const createParcelDeliveryRequests = lazy(
-  () => import("@/pages/sender/CreateParcelDeliveryRequests")
+  () => import("@/pages/sender/CourierRequests")
 );
-const viewAllCreatedParcels = lazy(
-  () => import("@/pages/sender/viewAllCreatedParcels")
-);
+const ParcelLogs = lazy(() => import("@/pages/sender/ParcelLogs"));
 
 export const senderSidebarItems: ISidebarItem[] = [
   {
-    title: "Parcel Lift",
+    // image: logo,
     items: [
       {
-        title: "Create parcel delivery request",
+        title: "Courier Request",
         url: "/sender/parcel-request",
         component: createParcelDeliveryRequests,
       },
@@ -24,9 +23,9 @@ export const senderSidebarItems: ISidebarItem[] = [
         component: CancelParcel,
       },
       {
-        title: "View all created parcels",
+        title: "Logs",
         url: "/sender/all-created-parcels",
-        component: viewAllCreatedParcels,
+        component: ParcelLogs,
       },
     ],
   },

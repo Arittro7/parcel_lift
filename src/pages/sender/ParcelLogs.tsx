@@ -2,7 +2,7 @@ import { ParcelCard } from "@/components/modules/Parcel/ParcelCard";
 import { useGetParcelsQuery } from "@/redux/features/Parcel/parcel.api";
 import { useEffect } from "react";
 
-export default function ViewAllCreatedParcels() {
+export default function ParcelLogs() {
   useEffect(() => {
     document.title = "Dashboard | Parcel Lift ";
   }, []);

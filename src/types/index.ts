@@ -10,7 +10,8 @@ export interface IResponse<T> {
 }
 
 export interface ISidebarItem {
-  title: string;
+  title?: string;
+  image?:string;
   items: {
     title: string;
     url: string;

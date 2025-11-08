@@ -13,18 +13,18 @@ import {
 } from "recharts";
 
 const parcelStats = [
-  { name: "Delivered", value: 120 },
-  { name: "Pending", value: 45 },
-  { name: "In Transit", value: 30 },
+  { name: "Delivered", value: 200 },
+  { name: "Pending", value: 102 },
+  { name: "In Transit", value: 88 },
   { name: "Cancelled", value: 10 },
 ];
 
 const monthlyData = [
-  { month: "Jan", parcels: 40 },
-  { month: "Feb", parcels: 55 },
+  { month: "Jan", parcels: 70 },
+  { month: "Feb", parcels: 50 },
   { month: "Mar", parcels: 75 },
-  { month: "Apr", parcels: 90 },
-  { month: "May", parcels: 60 },
+  { month: "Apr", parcels: 100 },
+  { month: "May", parcels: 77 },
 ];
 
 const COLORS = ["#22c55e", "#eab308", "#3b82f6", "#ef4444"];
@@ -55,7 +55,7 @@ export default function Analytics() {
       {/* Charts Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Bar Chart */}
-        <Card className="shadow-md rounded-2xl">
+        <Card className="shadow-md rounded-2xl bg-gray-200 text-black">
           <CardHeader>
             <CardTitle>Monthly Parcels</CardTitle>
           </CardHeader>

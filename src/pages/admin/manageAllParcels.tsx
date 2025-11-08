@@ -76,8 +76,8 @@ const ManageAllParcels = () => {
           {allParcels?.map((parcel: any) => (
             <TableRow key={parcel._id}>
               <TableCell className="font-medium">{parcel.trackingId}</TableCell>
-              <TableCell>{parcel.senderInfo.name || "N/A"}</TableCell>
-              <TableCell>{parcel.deliveryLocation.name || "N/A"}</TableCell>
+              <TableCell>{parcel.senderInfo?.name || "N/A"}</TableCell>
+              <TableCell>{parcel.deliveryLocation?.name || "N/A"}</TableCell>
               <TableCell>
                 <Badge
                   variant={

@@ -159,11 +159,11 @@ const Parcels = () => {
                 </TableCell>
                 <TableCell>{parcel.name}</TableCell>
                 <TableCell>
-                  {parcel.senderInfo.city}, {parcel.senderInfo.division}
+                  {parcel.senderInfo?.city}, {parcel.senderInfo?.division}
                 </TableCell>
                 <TableCell>
-                  {parcel.deliveryLocation.city},{" "}
-                  {parcel.deliveryLocation.division}
+                  {parcel.deliveryLocation?.city},{" "}
+                  {parcel.deliveryLocation?.division}
                 </TableCell>
                 <TableCell>
                   <Badge

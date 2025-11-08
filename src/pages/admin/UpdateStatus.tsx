@@ -75,15 +75,15 @@ const UpdateStatus = () => {
           {allParcels?.map((parcel: any) => (
             <TableRow key={parcel._id}>
               <TableCell className="font-medium">{parcel.trackingId}</TableCell>
-              <TableCell>{parcel.senderInfo.name || "N/A"}</TableCell>
-              <TableCell>{parcel.deliveryLocation.name || "N/A"}</TableCell>
+              <TableCell>{parcel.senderInfo?.name || "N/A"}</TableCell>
+              <TableCell>{parcel.deliveryLocation?.name || "N/A"}</TableCell>
               <TableCell>
                 <select
                   value={parcel.status}
                   onChange={(e) =>
                     handleStatusChange(parcel._id, e.target.value)
                   }
-                  className="px-2 py-1 rounded-md border border-gray-300"
+                  className="px-2 py-1 rounded-md border border-gray-300 bg-black"
                 >
                   {statusOptions.map((status) => (
                     <option key={status} value={status}>

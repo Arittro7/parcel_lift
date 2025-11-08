@@ -1,4 +1,4 @@
-import Logo from "@/assets/icon/Logo.png";
+import Logo2 from "@/assets/icon/Logo2.png";
 import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Link, useNavigate } from "react-router";
 
@@ -6,20 +6,17 @@ export default function Footer() {
   const navigate = useNavigate();
   return (
     <footer>
-      <div className="mx-auto container space-y-8 px-4 py-16">
+      <div className="mx-auto container space-y-8 px-4 py-16 bg-black text-gray-200">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div
               onClick={() => navigate("/")}
               className="text-foreground flex gap-2 items-center"
             >
-              <img src={Logo} alt="Logo" className="h-12 w-auto" />{" "}
-              <h1 className="pacifico-regular text-2xl font-semibold">
-                Parcel Lift
-              </h1>
+              <img src={Logo2} alt="Logo" className="h-18 ml-18" />
             </div>
 
-            <p className="mt-4 max-w-xs text-muted-foreground/80">
+            <p className="mt-4 max-w-xs text-gray-300">
               Parcel Lift — Fast, reliable, and secure parcel services across
               Bangladesh. Every parcel matters, every delivery on time.
             </p>
@@ -27,7 +24,7 @@ export default function Footer() {
             <ul className="mt-8 flex gap-6">
               <li>
                 <Link
-                  to="https://www.facebook.com/habibur5231"
+                  to="https://www.facebook.com/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-400 transition hover:opacity-75"
@@ -40,7 +37,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="https://giftcartgalaxy.xyz"
+                  to="#"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-400 transition hover:opacity-75"
@@ -53,7 +50,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="https://giftcartgalaxy.xyz"
+                  to="#"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-400 transition hover:opacity-75"
@@ -66,7 +63,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="https://github.com/habibur5313"
+                  to="https://github.com/arittro7"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-400 transition hover:opacity-75"
@@ -79,12 +76,12 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="https://www.linkedin.com/in/habibur-rahman13"
+                  to="https://www.linkedin.com/in/nahid-arman"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-400 transition hover:opacity-75"
                 >
-                  <span className="sr-only">Linkdin</span>
+                  <span className="sr-only">Linkedin</span>
 
                   <Linkedin></Linkedin>
                 </Link>
@@ -102,8 +99,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    1on1 Coaching{" "}
+                   Confidential Documents
                   </Link>
                 </li>
 
@@ -112,8 +108,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Company Review{" "}
+                    Heavy Items
                   </Link>
                 </li>
 
@@ -122,8 +117,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Accounts Review{" "}
+                    Chemical Items
                   </Link>
                 </li>
 
@@ -132,8 +126,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    HR Consulting{" "}
+                    Vehicle Transport 
                   </Link>
                 </li>
               </ul>
@@ -148,8 +141,7 @@ export default function Footer() {
                     to="/about"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    About{" "}
+                    About
                   </Link>
                 </li>
 
@@ -158,8 +150,7 @@ export default function Footer() {
                     to="/about"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Meet the Team{" "}
+                    Meet the Team
                   </Link>
                 </li>
 
@@ -168,8 +159,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Accounts Review{" "}
+                    Accounts Review
                   </Link>
                 </li>
               </ul>
@@ -184,8 +174,7 @@ export default function Footer() {
                     to="/contact"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Contact{" "}
+                    Contact
                   </Link>
                 </li>
 
@@ -194,8 +183,7 @@ export default function Footer() {
                     to="/faq"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    FAQs{" "}
+                    FAQs
                   </Link>
                 </li>
 
@@ -204,8 +192,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Live Chat{" "}
+                    Live Chat
                   </Link>
                 </li>
               </ul>
@@ -220,8 +207,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Accessibility{" "}
+                    Accessibility
                   </Link>
                 </li>
 
@@ -230,8 +216,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Returns Policy{" "}
+                    Returns Policy
                   </Link>
                 </li>
 
@@ -240,8 +225,7 @@ export default function Footer() {
                     to="/"
                     className="text-gray-400 transition hover:opacity-75"
                   >
-                    {" "}
-                    Refund Policy{" "}
+                    Refund Policy
                   </Link>
                 </li>
 

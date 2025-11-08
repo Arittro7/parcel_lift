@@ -59,7 +59,7 @@ const ManageAllUsers = () => {
         <TableBody>
           {allUsers?.map((user: any) => (
             <TableRow key={user._id}>
-              <TableCell className="font-medium">{user.name}</TableCell>
+              <TableCell className="font-medium">{user?.name}</TableCell>
               <TableCell>{user.email}</TableCell>
               <TableCell>
                 <Badge

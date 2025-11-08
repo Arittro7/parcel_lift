@@ -162,7 +162,7 @@ export function RegisterForm({
                     <select
                       {...field}
                       defaultValue={roles[0]}
-                      className="px-2 py-1 rounded-md border border-gray-300"
+                      className="px-2 py-1 rounded-md border border-gray-300 bg-gray-800"
                     >
                       {roles.map((role) => (
                         <option key={role} value={role}>

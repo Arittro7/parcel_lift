@@ -1,7 +1,7 @@
 import type { ISidebarItem } from "@/types";
 import { lazy } from "react";
 
-const confirmParcelDelivery = lazy(() => import("@/pages/receiver/parcelStatus"));
+const confirmParcelDelivery = lazy(() => import("@/pages/receiver/deliveryStatus"));
 const viewDeliveryHistory = lazy(() => import("@/pages/receiver/deliveryHistory"));
 const ViewIncomingParcels = lazy(() => import("@/pages/receiver/incomingParcel"));
 

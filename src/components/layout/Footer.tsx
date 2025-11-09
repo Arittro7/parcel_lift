@@ -228,15 +228,6 @@ export default function Footer() {
                     Refund Policy
                   </Link>
                 </li>
-
-                <li>
-                  <Link
-                    to="/"
-                    className="text-gray-400 transition hover:opacity-75"
-                  >
-                    Hiring-3 Statistics
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>

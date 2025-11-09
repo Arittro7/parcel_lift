@@ -55,34 +55,34 @@ export const ParcelCard: React.FC<ParcelCardProps> = ({
       <CardContent className="space-y-2 flex flex-col w-full h-full">
         <div className="flex justify-between">
           <span>Status:</span>
-          <Badge
+          <Badge className="bg-orange-400"
             variant={parcel.status === "REQUESTED" ? "outline" : "default"}
           >
             {parcel.status}
           </Badge>
         </div>
         <div>
-          <strong>Sender:</strong> {parcel.senderInfo.division},
+          <strong className="text-green-400">Sender:</strong> {parcel.senderInfo.division},
           {parcel.senderInfo.city}, {parcel.senderInfo.street} -
           {parcel.senderInfo.zip}
         </div>
         <div>
-          <strong>Delivery Location:</strong> {parcel.deliveryLocation.division}
+          <strong className="text-green-400">Delivery Location:</strong> {parcel.deliveryLocation.division}
           , {parcel.deliveryLocation.city}, {parcel.deliveryLocation.street} -
           {parcel.deliveryLocation.zip}
         </div>
         <div>
-          <strong>Weight:</strong> {parcel.weight} kg
+          <strong className="text-green-400">Weight:</strong> {parcel.weight} kg
         </div>
         <div>
-          <strong>Cost:</strong> ${parcel.cost}
+          <strong className="text-green-400">Cost:</strong> ${parcel.cost}
         </div>
         <div>
-          <strong>Pick Up:</strong>{" "}
+          <strong className="text-green-400">Pick Up:</strong>{" "}
           {new Date(parcel.pickUpDate).toLocaleString()}
         </div>
         <div>
-          <strong>Estimated Delivery:</strong>{" "}
+          <strong className="text-green-400">Estimated Delivery:</strong>{" "}
           {new Date(parcel.estimatedDeliveryDate).toLocaleString()}
         </div>
         {pathname === "/sender/cancel-parcel" && (
@@ -112,7 +112,7 @@ export const ParcelCard: React.FC<ParcelCardProps> = ({
         {pathname === "/receiver/confirm-parcels" && (
           <div className="mt-auto flex justify-end">
             <Button
-              variant="destructive"
+              className="bg-green-400"
               onClick={() => {
                 Swal.fire({
                   title: "Do you want to confirm parcel",

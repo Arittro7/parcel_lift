@@ -1,4 +1,4 @@
-import deliveryLogin from "@/assets/images/delivery-login.jpg"; // Replace with delivery-themed illustration
+import deliveryLogin from "@/assets/icon/delivery man.gif"; // Replace with delivery-themed illustration
 import { Link } from "react-router";
 import { LoginForm } from "@/components/modules/authentication/LoginForm";
 import Logo from "@/assets/icon/Logo.png";

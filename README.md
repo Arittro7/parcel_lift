@@ -1,7 +1,7 @@
 
 ---
 
-# **Parcel Lift – Parcel Delivery Frontend**
+# **Parcel Lift**
 
 ## **Live Demo:** [Parcel Lift](https://parcel-lift.netlify.app)
 
@@ -9,7 +9,7 @@
 
 **Backend Repository:** [GitHub Backend](https://github.com/Arittro7/parcel-lift-a5)
 
-**Backend API URL:** [Parcel Lift Backend](https://parcel-lift-backend.vercel.app/)
+**Backend API URL:** [Parcel Lift Backend](https://parcel-lift-a5.vercel.app/)
 
 ---
 
@@ -116,15 +116,6 @@ npm run dev
 npm run build
 npm run preview
 ```
-
----
-
-## **Credentials for Demo**
-
-* **Admin:** `admin@parcel.com / Parcel#123`
-* **Sender:** `sender@parcel.com / Sender#123`
-* **Receiver:** `receiver@parcel.com / Receiver#123`
-
 
 ---
 

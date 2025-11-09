@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# **Parcel Lift – Parcel Delivery Frontend**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Live Demo:** [Parcel Lift](https://parcel-lift.netlify.app)
 
-## React Compiler
+**Frontend Repository:** [GitHub Client](https://github.com/Arittro7/parcel_lift)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend Repository:** [GitHub Backend](https://github.com/Arittro7/parcel-lift-a5)
 
-## Expanding the ESLint configuration
+**Backend API URL:** [Parcel Lift Backend](https://parcel-lift-backend.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## **Project Overview**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+*Parcel Lift* is a secure, role-based, and user-friendly frontend application for a Parcel Delivery System, built with **React.js**, **Redux Toolkit**, and **RTK Query**.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The app interacts with a REST API backend to enable **Senders**, **Receivers**, and **Admins** to perform parcel operations, manage records, and track shipments efficiently. The UI is fully responsive, clean, and modern using **Tailwind CSS**.
+
+---
+
+## 🌐 **Tech Stack**
+
+**Frontend:**
+
+* React.js + TypeScript
+* Redux Toolkit & RTK Query (state management & API calls)
+* Tailwind CSS (styling)
+* React Hook Form + Zod (form handling & validation)
+* Sonner / SweetAlert2 (notifications)
+
+**Backend (API):**
+
+* Node.js + Express
+* MongoDB + Mongoose
+* JWT + bcrypt (authentication & authorization)
+
+---
+
+# 🚀 Key Features
+## **1. Public Pages**
+- Home: Introductory overview of the service.
+- About: Mission, vision, and team details.
+- Contact: Inquiry form with simulated submission.
+## **2. Authentication**
+- JWT‑based login and registration.
+- Role‑aware redirects (Sender, Receiver, Admin).
+- Persistent login state across refreshes.
+- Secure logout functionality.
+## **3. Sender Dashboard**
+- Create new parcel delivery requests.
+- Cancel parcels (if not yet dispatched).
+- View all created parcels with detailed status history.
+## 4. **Receiver Dashboard**
+- View parcels assigned to the receiver.
+- Confirm successful deliveries.
+- Access complete delivery history.
+## 5. **Admin Dashboard**
+- Manage users (block/unblock).
+- Manage parcels (block/unblock, update delivery status).
+- (Optional) Assign delivery personnel.
+## 6. **Parcel Tracking**
+- Unique tracking ID for every parcel.
+- Search parcels by tracking ID (public or authenticated).
+- Detailed timeline with status, timestamp, updatedBy, and notes.
+## 7. **General Features**
+- Role‑based navigation menus.
+- Global error handling and loading indicators.
+- Strong form validation (required fields, numeric checks, positive values).
+- Pagination and advanced table filtering.
+- Toast notifications for success/error feedback.
+## 8. **Dashboard & Data Visualization**
+- Overview Cards: Total, Delivered, In Transit, Pending/Cancelled.
+- Charts: Bar and pie charts for parcel trends and delivery status.
+- Parcel Table: Paginated, searchable, filterable with actions (View, Cancel, Confirm).
+- Status Timeline: Visual history of parcel updates.
+- Fully responsive and mobile‑friendly design.
+---
+
+## **UI/UX Considerations**
+
+* Fully responsive design across devices.
+* Consistent margins, spacing, and typography.
+* Accessible color contrast for readability.
+* Performance optimized via lazy-loading and skeleton loaders.
+* Realistic data used instead of placeholders.
+
+---
+
+## **Setup Instructions**
+
+1. **Clone Repository**
+
+```bash
+git clone https://github.com/Arittro7/parcel_lift.git
+cd parcel_lift
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Install Dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. **Run Development Server**
+
+```bash
+npm run dev
+```
+
+4. **Build for Production**
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## **Credentials for Demo**
+
+* **Admin:** `admin@parcel.com / Parcel#123`
+* **Sender:** `sender@parcel.com / Sender#123`
+* **Receiver:** `receiver@parcel.com / Receiver#123`
+
+
+---
+
+## Code Walk Through Video
+
+**Code Explanation:** [Video](https://drive.google.com/file/d/1g1hz0PdElT9SW9k4tRwo6PyobqJOs2y6/view?usp=sharing)
+
+---

@@ -67,6 +67,5 @@ export const {
   useLogoutMutation,
   useGetUsersQuery,
   useToggleUserStatusMutation,
-  // 🔹 export new query hook
   useLazyGetUserByEmailQuery,
 } = authApi;

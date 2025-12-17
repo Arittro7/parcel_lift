@@ -119,8 +119,14 @@ npm run preview
 
 ---
 
-## Code Walk Through Video
+## 🔐 Test Accounts (Sample Credentials)
 
-**Code Explanation:** [Video](https://drive.google.com/file/d/1g1hz0PdElT9SW9k4tRwo6PyobqJOs2y6/view?usp=sharing)
+Use the following accounts for testing the platform:
+
+| Role        | Email                  | Password      |
+| ----------- | ---------------------- | ------------- |
+| **Admin**   | `admin@parcel.com`     | `Parcel#123`  |
+| **Tourist** | `sender@parcel.com`    | `Sender#123`  |
+| **Guide**   | `receiver@parcel.com`  | `Receiver#123`|
 
 ---

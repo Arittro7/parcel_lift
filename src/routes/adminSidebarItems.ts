@@ -22,17 +22,17 @@ export const adminSidebarItems: ISidebarItem[] = [
         component: Parcels,
       },
       {
-        title: "manage all users",
+        title: "Users",
         url: "/admin/all-users",
         component: ManageAllUsers,
       },
       {
-        title: " manage all parcels",
+        title: "Parcels",
         url: "/admin/all-parcels",
         component: ManageAllParcels,
       },
       {
-        title: " update parcel status",
+        title: "Status",
         url: "/admin/update-status",
         component: UpdateStatus,
       },

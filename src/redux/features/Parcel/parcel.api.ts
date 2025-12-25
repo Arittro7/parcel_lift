@@ -52,6 +52,15 @@ export const parcelApi = baseApi.injectEndpoints({
       transformResponse: (response: any) => response.data,
     }),
 
+    // parcel-Stats
+    getParcelStats: builder.query<{
+      statusCounts: { name: string; value: number }[];
+      monthlyParcels: { month: string; parcels: number }[];
+    }, void>({
+      query: () => ({ url: "/parcels/stats", method: "GET" }),
+      providesTags: ["PARCEL"],
+    }),
+
     Parcels: builder.query<
       IParcelResponse,
       { page?: number; limit?: number; status?: string }
@@ -101,4 +110,5 @@ export const {
   useBlockParcelMutation,
   useUnblockParcelMutation,
   useGetParcelByTrackingIdQuery,
+  useGetParcelStatsQuery
 } = parcelApi;

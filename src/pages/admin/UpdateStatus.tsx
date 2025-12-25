@@ -83,10 +83,10 @@ const UpdateStatus = () => {
                   onChange={(e) =>
                     handleStatusChange(parcel._id, e.target.value)
                   }
-                  className="px-2 py-1 rounded-md border border-gray-300 bg-black"
+                  className="px-2 py-1 rounded-md border border-gray-300 "
                 >
                   {statusOptions.map((status) => (
-                    <option key={status} value={status}>
+                    <option className="bg-gray-800 text-white" key={status} value={status}>
                       {status}
                     </option>
                   ))}

@@ -16,6 +16,9 @@ import { Home } from "@/pages/Home";
 import { Contact } from "@/pages/Contact";
 import { FAQ } from "@/pages/FAQ";
 import Error from "@/pages/Error";
+import Tracking from "@/pages/Tracking";
+import NationalServices from "@/pages/services/NationalServices";
+import InternationalServices from "@/pages/services/InternationalServices";
 
 
 export const router = createBrowserRouter([
@@ -38,6 +41,18 @@ export const router = createBrowserRouter([
       {
         Component: FAQ,
         path: "faq",
+      },
+      {
+        Component: Tracking,
+        path: "tracking",
+      },
+      {
+        Component: NationalServices,
+        path: "services/national",
+      },
+      {
+        Component: InternationalServices,
+        path: "services/international",
       },
     ],
   },

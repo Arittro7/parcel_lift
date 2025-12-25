@@ -27,7 +27,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden py-20 min-h-[calc(100vh-145px)]">
+    <section className="relative h-screen overflow-hidden py-20 min-h-[calc(100vh-145px)]">
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
         <img
           alt="background"
@@ -92,22 +92,6 @@ export default function HeroSection() {
                         parcel.estimatedDeliveryDate
                       ).toLocaleDateString()}
                     </p>
-                    <div className="mt-2">
-                      <p className="font-semibold">Sender Info:</p>
-                      <p>
-                        {parcel.senderInfo.division}, {parcel.senderInfo.city},{" "}
-                        {parcel.senderInfo.zip}, {parcel.senderInfo.street}
-                      </p>
-                    </div>
-                    <div className="mt-2">
-                      <p className="font-semibold">Delivery Location:</p>
-                      <p>
-                        {parcel.deliveryLocation.division},{" "}
-                        {parcel.deliveryLocation.city},{" "}
-                        {parcel.deliveryLocation.zip},{" "}
-                        {parcel.deliveryLocation.street}
-                      </p>
-                    </div>
                   </CardContent>
                 </Card>
               ))}

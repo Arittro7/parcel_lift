@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router";
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <footer>
+    <footer className="">
       <div className="mx-auto container space-y-8 px-4 py-16 bg-black text-gray-200">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>

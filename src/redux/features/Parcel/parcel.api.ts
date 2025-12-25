@@ -53,12 +53,23 @@ export const parcelApi = baseApi.injectEndpoints({
     }),
 
     // parcel-Stats
-    getParcelStats: builder.query<{
-      statusCounts: { name: string; value: number }[];
-      monthlyParcels: { month: string; parcels: number }[];
-    }, void>({
+    // getParcelStats: builder.query<{
+    //   statusCounts: { name: string; value: number }[];
+    //   monthlyParcels: { month: string; parcels: number }[];
+    // }, void>({
+    //   query: () => ({ url: "/parcels/stats", method: "GET" }),
+    //   providesTags: ["PARCEL"],
+    // }),
+    getParcelStats: builder.query<
+      {
+        statusCounts: { name: string; value: number }[];
+        monthlyParcels: { month: string; parcels: number }[];
+      },
+      void
+    >({
       query: () => ({ url: "/parcels/stats", method: "GET" }),
       providesTags: ["PARCEL"],
+      transformResponse: (response: any) => response.data,
     }),
 
     Parcels: builder.query<
@@ -110,5 +121,5 @@ export const {
   useBlockParcelMutation,
   useUnblockParcelMutation,
   useGetParcelByTrackingIdQuery,
-  useGetParcelStatsQuery
+  useGetParcelStatsQuery,
 } = parcelApi;

@@ -37,7 +37,7 @@ export default function Analytics() {
     document.title = "Analytics | Parcel Lift";
   }, []);
 
-  const rawStats = data?.data;
+  const rawStats = data;
   const statusCounts = rawStats?.statusCounts || [];
   const monthlyParcels = rawStats?.monthlyParcels || [];
 
